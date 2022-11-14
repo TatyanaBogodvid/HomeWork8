@@ -14,21 +14,21 @@ public class Main {
         //Задача 2
         System.out.println("Задача 2");
         System.out.print("");
-        for (int i = 0; i < 3; i ++) {
+        for (int i = 0; i < figure.length; i ++) {
             System.out.print(figure[i]);
-            if (i < 2){
+            if (i < figure.length - 1){
                 System.out.print(", ");}
         }
         System.out.println("");
-        for(int a = 0; a <3; a ++) {
+        for (int a = 0; a < floats.length; a ++) {
             System.out.print(floats[a]);
-            if (a < 2){
+            if (a < floats.length - 1){
                 System.out.print(", ");}
         }
         System.out.println("");
-        for(int b = 0; b <4; b ++) {
+        for(int b = 0; b < random.length; b ++) {
             System.out.print(random[b]);
-            if (b < 3){
+            if (b < random.length - 1){
                 System.out.print(", ");}
         }
 
@@ -36,21 +36,21 @@ public class Main {
         //Задача 3
         System.out.println("");
         System.out.println("Задача 3");
-        for (int i = 2; i < 3 && i >= 0; i --) {
+        for (int i = figure.length - 1; i < figure.length && i >= 0; i --) {
             System.out.print(figure[i]);
             if(i > 0) {
                 System.out.print(", ");
             }
         }
         System.out.println("");
-        for (int a = 2; a < 3 && a >= 0; a --) {
+        for (int a = floats.length - 1; a < floats.length && a >= 0; a --) {
             System.out.print(floats[a]);
             if(a > 0) {
                 System.out.print(", ");
             }
         }
         System.out.println("");
-        for (int b = 3; b < 4 && b >= 0; b --) {
+        for (int b = random.length - 1; b < random.length && b >= 0; b --) {
             System.out.print(random[b]);
             if(b > 0) {
                 System.out.print(", ");
@@ -60,11 +60,11 @@ public class Main {
         //Задача 4
         System.out.println("");
         System.out.println("Задача 4");
-        for (int i = 0; i < 3; i++) {
-            figure[i] = figure[i] + 1;
-            if (figure[i] % 2 == 0) {
-                System.out.println(figure[i]);}
-        }
+        for (int i = 0; i < figure.length; i++) {
+            if (figure[i] % 2 != 0) {
+                figure[i] = figure[i] + 1;}
+                System.out.print(figure[i] + " ");
+            }
 
     }
 }
